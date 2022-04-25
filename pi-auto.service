@@ -1,0 +1,18 @@
+# sudo nano /lib/systemd/system/pi-auto.service
+# sudo systemctl restart pi-auto.service
+# sudo systemctl status pi-auto.service
+# sudo systemctl enable pi-auto.service
+# sudo systemctl daemon-reload
+# User=pi?
+
+[Unit]
+Description=pi-auto
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/pi-auto
+ExecStart=/bin/bash -c "mount -o remount,rw /pi-auto && python3 /pi-auto/main.py"
+
+[Install]
+WantedBy=multi-user.target
