@@ -6,10 +6,8 @@ Currently, in testing
 Using a Raspberry Pi Zero with gps/4g hat and connecting via bluetooth to OBD onboard
 
 
-make a variables.py with these variables
-token = '324234234fsdlkhse52klh34'
-auth_user_id = '102'
-apn_var = 'telstra.wap'
+Added sample variables.py file
+
 
 
 # sakis 3g mention
