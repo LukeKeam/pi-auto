@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pi-auto',
-    version='0.9.0',
+    version='0.9.1',
     packages=[''],
     url='https://github.com/LukeKeam/pi-auto',
     license='GPL-3.0 License',
