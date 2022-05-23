@@ -6,7 +6,7 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 # install
-sudo apt-get install python3 python3-pip tmux minicom screen bluetooth busybox-syslogd wvdial libqmi-utils ntp  -y
+sudo apt-get install python3 python3-pip tmux minicom screen bluetooth busybox-syslogd wvdial libqmi-utils ntp git -y
 # pip install
 sudo pip3 install -r requirements.txt
 # update host name sudo nano /etc/hostname or # sudo sh -c "echo 'text' >> /file.txt"
