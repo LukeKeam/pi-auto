@@ -57,7 +57,7 @@ sudo systemctl enable pi-auto.service
 
 
 # https://hallard.me/raspberry-pi-read-only/
-# make os read only
+# make os read only, do I need to do this before I clone?????????????????????
 append_line="/home/pi/pi-auto     /pi-auto        ext4    defaults,bind,rw     0       0
 tmpfs        /tmp            tmpfs   nosuid,nodev         0       0
 tmpfs        /var/log        tmpfs   nosuid,nodev         0       0
