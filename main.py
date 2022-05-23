@@ -9,6 +9,7 @@ from gpio import gpio_power_on, gpio_power_off
 from rest_communicate import post_to_server
 from log_write_to_text_file import log_write_to_text_file
 from variables import *
+import os.path
 
 
 # user vars
@@ -23,6 +24,15 @@ os.chdir('/pi-auto')
 
 # log_write_to_text_file('msg')
 log_write_to_text_file('Program Started')
+
+
+# test for database & create one if not exist
+my_file = os.path.isfile("data.db")
+if my_file == False:
+    import db_setup
+    db_setup.create_tables()
+    db_setup.add_data()
+    print("Created db")
 
 
 # db connect
