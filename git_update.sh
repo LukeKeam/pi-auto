@@ -1,5 +1,5 @@
 #!/bin/sh
-# https://github.com/LukeKeam/pi-auto.git
+# git clone https://github.com/LukeKeam/pi-auto.git
 
 git remote update
 

@@ -103,19 +103,10 @@ def internet_stop():
     log_write_to_text_file('Internet_start: {0} {1}'.format(result.stdout, result.stderr))
 
 
-# todo. turn into a PyPi package
-def update_check_thread():
-    def update_check():
-        try:
-            print('Updating')
-            log_write_to_text_file('Updating')
-            result = subprocess.run(['pip3', 'install',
-                            'https://github.com/LukeKeam/pi-auto/archive/refs/heads/main.zip'], capture_output=True)
-            log_write_to_text_file('Internet_start: {0} {1}'.format(result.stdout, result.stderr))
-        except:
-            pass
-    t = threading.Thread(target=update_check, args=())
-    t.start()
+def update_check():
+    result = subprocess.run(['sudo', 'sh', './git_update.sh'], capture_output=True)
+    print('Internet_start: {0} {1}'.format(result.stdout, result.stderr))
+    log_write_to_text_file('Internet_start: {0} {1}'.format(result.stdout, result.stderr))
 
 
 def update_datetime_thread():
@@ -137,6 +128,8 @@ if __name__ == '__main__':
     startup()
     ser = serial.Serial('/dev/ttyS0', 9600)
     internet_start()
+    time.sleep(30)  # testing bonus time for letting the app/pi start
+    update_check()
     update_datetime_thread()
     # update_check_thread()
     post_to_server(conn=conn, token=token, auth_user_id=auth_user_id)
