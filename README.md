@@ -9,6 +9,7 @@ Using a Raspberry Pi Zero with gps/4g hat and connecting via bluetooth to OBD on
 Added sample variables.py file
 
 
+test for update 
 
 # sakis 3g mention
 https://github.com/Pahan-Madusha/sakis3g-for-3G-modems

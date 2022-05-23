@@ -1,3 +1,6 @@
+# have installed and working os, you will not need a gui!
+# pi zero w Raspberry Pi OS Lite (Legacy) https://www.raspberrypi.com/software/operating-systems/
+
 # once have ssh connection to pi
 # update
 sudo apt-get update

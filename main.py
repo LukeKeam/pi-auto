@@ -94,7 +94,7 @@ def temp_start():
 def internet_start():
     result = subprocess.run(['sudo', './sakis3g', 'connect', 'OTHER="USBMODEM"', 'USBMODEM="1e0e:9205"',
                           'USBINTERFACE="3"',
-    'APN="telstra.wap"', '--noprobe'], capture_output=True)
+    'APN="telstra.internet"', '--noprobe'], capture_output=True)
     log_write_to_text_file('Internet_start: {0} {1}'.format(result.stdout, result.stderr))
 
 
