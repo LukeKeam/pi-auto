@@ -18,11 +18,9 @@ echo "127.0.1.1   $newhostname" | sudo tee -a /etc/hosts
 # mypassword="password"
 # echo "$mypassword" | passwd --stdin
 # creat dir ~/code
-sudo mkdir /pi-auto
-# copy files to pi from github? or Pypi
-wget https://github.com/LukeKeam/pi-auto/archive/refs/heads/main.zip
-# unzip
-unzip main.zip -d /pi-auto
+cd /
+# clone repository
+git clone https://github.com/LukeKeam/pi-auto.git
 # add line to config enable uart # # raspi-config for serial???
 append_line="enable_uart=1"
 echo "$append_line" | sudo tee -a /boot/config.txt
