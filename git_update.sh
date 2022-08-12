@@ -14,11 +14,11 @@ if [ $LOCAL = $REMOTE ]; then
 elif [ $LOCAL = $BASE ]; then
     echo "Need to pull"
     # store variables
-    git stash ./variables.py
+    git stash push ./variables.py
     # pull update
     git pull
     # restore variables
-    git pop
+    git stash pop
 elif [ $REMOTE = $BASE ]; then
     echo "Need to push"
 else
