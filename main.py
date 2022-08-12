@@ -56,7 +56,7 @@ ser = serial.Serial('/dev/ttyS0', 9600)
 # sudo rfcomm bind rfcomm0 00:1D:A5:68:C3:E2
 bluetooth_folder_check = os.path.isdir('/dev/rfcomm0')
 if bluetooth_folder_check == False:
-    subprocess.run(['sudo', 'rfcomm', 'bind', 'rfcomm0', variables.bluteooth_mac])
+    subprocess.run(['sudo', 'rfcomm', 'bind', 'rfcomm0', variables.bluetooth_mac])
 
 obd.logger.setLevel(obd.logging.DEBUG)
 obd_connection = obd.OBD(portstr='/dev/rfcomm0', baudrate='115200', protocol='6')
