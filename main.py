@@ -30,7 +30,6 @@ log_write_to_text_file('Program Started')
 my_file = os.path.isfile("data.db")
 if my_file == False:
     import db_setup
-
     db_setup.create_tables()
     db_setup.add_data()
     print("Created db")
