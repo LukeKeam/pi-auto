@@ -43,14 +43,7 @@ conn = db_create_connection(db_file)
 
 
 # gpio_power_on()
-ser = serial.Serial('/dev/ttyS0', 9600)
-# ser = serial.Serial('/dev/ttyUSB3',115200) # seems to work
-# ser = serial.Serial('/dev/ttyAMA0',115200)
-# ser = serial.Serial('/dev/serial1',115200)
-# windows connect
-# ser = serial.Serial('COM5', 115200)
-# ser_internet = serial.Serial('/dev/ttyUSB3',115200)
-
+ser = serial.Serial(variables.serial_connection, 9600)
 
 # sudo rfcomm bind rfcomm0 00:1D:A5:68:C3:E2
 bluetooth_folder_check = os.path.isdir('/dev/rfcomm0')
