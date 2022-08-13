@@ -1,7 +1,8 @@
 #!/bin/bash
 echo "Thanks for choosing pi-auto from https://fleet-rack.org"
 # have installed and working os, you will not need a gui!
-# pi zero w Raspberry Pi OS Lite (Legacy) or preferably 64bit os https://www.raspberrypi.com/software/operating-systems/
+# pi zero w Raspberry Pi OS Lite (Legacy) or preferably 32bit os https://www.raspberrypi.com/software/operating-systems/
+# curl -LJO https://raw.githubusercontent.com/LukeKeam/pi-auto/master/install.sh && sudo sh ./install.sh
 # once have ssh connection to pi
 
 # update

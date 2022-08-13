@@ -8,6 +8,8 @@ Using a Raspberry Pi Zero with gps/4g hat and connecting via bluetooth to OBD on
 
 Added sample variables.py file
 
+# install
+ curl -LJO https://raw.githubusercontent.com/LukeKeam/pi-auto/master/install.sh && sudo sh ./install.sh
 
 test for update 
 
