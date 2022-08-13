@@ -129,8 +129,8 @@ if __name__ == '__main__':
     temp_start()
     shutdown(ser)
     startup()
-    ser = serial.Serial(variables.serial_connection, 9600)
     internet_start()
+    ser = serial.Serial(variables.serial_connection, 9600)
     time.sleep(30)  # testing bonus time for letting the app/pi start
     update_check()
     update_datetime_thread()
