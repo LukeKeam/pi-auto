@@ -129,7 +129,7 @@ if __name__ == '__main__':
     temp_start()
     shutdown(ser)
     startup()
-    ser = serial.Serial('/dev/ttyS0', 9600)
+    ser = serial.Serial(variables.serial_connection, 9600)
     internet_start()
     time.sleep(30)  # testing bonus time for letting the app/pi start
     update_check()
@@ -140,7 +140,7 @@ if __name__ == '__main__':
     # plan b
     shutdown(ser)
     startup()
-    ser = serial.Serial('/dev/ttyS0', 9600)
+    ser = serial.Serial(variables.serial_connection, 9600)
     gps_stop(ser)
     gps_start(ser)
     gps_start(ser)
